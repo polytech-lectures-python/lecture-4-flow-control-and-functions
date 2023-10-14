@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "lecture-4-flow-control-and-functions"
+version = "0.1.0"
+description = "Lecture 4: flow control and functions"
+authors = ["Nicolay Veniaminov <nicolay.veniaminov@dct-ai.com>"]
+readme = "README.md"
+packages = [{include = "lecture_4_flow_control_and_functions"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
