@@ -1,10 +1,9 @@
 def repeat_apply(n):
     def inner(f):
         def wrapper(x):
-            result = f(x)
-            for i in range(n - 1):
-                result = f(result)
-            return result
+            for i in range(n):
+                x = f(x)
+            return x
 
         return wrapper
 
@@ -13,9 +12,9 @@ def repeat_apply(n):
 
 @repeat_apply(3)
 def double(x):
-    return 2 * x
+    return x*2
 
 # double = (repeat_apply(3))(double)
 
 
-print(double(3))
+print(double(2))

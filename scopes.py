@@ -29,4 +29,4 @@ def scope_test():
 
 
 scope_test()
-# print("In global scope:", msg)
+print("In global scope:", msg)

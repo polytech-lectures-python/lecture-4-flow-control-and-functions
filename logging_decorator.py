@@ -6,11 +6,12 @@ def add_logging(f):
     return wrapper
 
 
+@add_logging
 def f(x):
     return x**2
 
 
-f = add_logging(f)
+# f = add_logging(f)
 
 
 @add_logging
@@ -19,7 +20,7 @@ def g(x, y):
 
 
 x = f(3), f(2)
-y = g(1, 2, 3)
+y = g(1, 2)
 
 
 
