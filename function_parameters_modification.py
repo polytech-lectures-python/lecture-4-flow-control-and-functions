@@ -5,4 +5,6 @@ def f(param=fun_param):
 
 fun_param = 2
 
+f(fun_param)
 f()
+

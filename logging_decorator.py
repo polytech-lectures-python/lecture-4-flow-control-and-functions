@@ -1,7 +1,9 @@
 def add_logging(f):
     def wrapper(*args, **kwargs):
         result = f(*args, **kwargs)
-        print(f"Result of {f.__name__} is {result}")
+        print(f"Result of {f.__name__}({','.join(str(a) for a in args)}"
+              f"{', ' if args and kwargs else ''}"
+              f"{','.join(f'{k}={v}' for k, v in kwargs.items())}) is {result}")
         return result
     return wrapper
 
@@ -19,8 +21,8 @@ def g(x, y):
     return x + y
 
 
-x = f(3), f(2)
-y = g(1, 2)
+a = f(x=3), f(2)
+b = g(1, y=2)
 
 
 
